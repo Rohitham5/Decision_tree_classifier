@@ -12,10 +12,6 @@
 
 *MENTOR*: NEELA SANTOSH
 
-# Decision Tree Classification using Scikit-learn
-
-This project demonstrates how to implement and visualize a Decision Tree Classifier using Python's Scikit-learn library. It is developed as part of the internship deliverables for CodTech and fulfills the requirement of building and visualizing a Decision Tree model with analysis on a chosen dataset.
-
 ## Project Objective
 
 The primary objective of this project is to:

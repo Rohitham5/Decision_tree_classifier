@@ -106,6 +106,12 @@ plt.title("Decision Tree Visualization - Iris Dataset")
 plt.show()
 ```
 
+## Results:
+The model demonstrates strong performance, achieving high accuracy. The confusion matrix and classification report show minimal misclassification. Visualization of the decision tree provides clear insights into feature-based decision-making, especially the importance of petal width and length.
+
+##  Conclusion:
+This project successfully demonstrates the implementation of a Decision Tree Classifier using the Iris dataset. The model was trained, evaluated, and visualized using Scikit-learn. It achieved high accuracy and provided clear insights through metrics and a visual decision tree. 
+
 ## Decision Tree Representation:
 ### OUTPUT:
 

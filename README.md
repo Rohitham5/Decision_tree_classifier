@@ -46,4 +46,65 @@ from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+```
 
+### 2. Load the Dataset
+We use Scikit-learn’s built-in Iris dataset. It contains:
+- 150 samples
+- 4 features (sepal/petal length and width)
+- 3 classes (Setosa, Versicolor, Virginica)
+
+```python
+iris = load_iris()
+X = pd.DataFrame(iris.data, columns=iris.feature_names)
+y = pd.Series(iris.target)
+```
+
+### 3.Split the Dataset
+Split data into 80% training and 20% testing.
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+### 4. Train the Model
+Create and train the Decision Tree Classifier using entropy and max depth of 3.
+
+```python
+model = DecisionTreeClassifier(criterion='entropy', max_depth=3, random_state=42)
+model.fit(X_train, y_train)
+```
+
+### 5. Make Predictions
+Use the trained model to predict values on the test set.
+
+```python
+y_pred = model.predict(X_test)
+```
+
+### 6. Evaluate the Model
+Evaluate using accuracy, confusion matrix, and classification report.
+
+```python
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Classification Report:\n", classification_report(y_test, y_pred, target_names=iris.target_names))
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+```
+
+### 7. Visualize the Decision Tree
+Visualize the trained model.
+
+```python
+plt.figure(figsize=(15, 10))
+plot_tree(model, 
+          feature_names=iris.feature_names, 
+          class_names=iris.target_names, 
+          filled=True, 
+          rounded=True, 
+          fontsize=12)
+plt.title("Decision Tree Visualization - Iris Dataset")
+plt.show()
+```
+
+## Decision Tree Representation:
+### OUTPUT:

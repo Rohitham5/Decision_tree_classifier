@@ -108,3 +108,5 @@ plt.show()
 
 ## Decision Tree Representation:
 ### OUTPUT:
+
+![Screenshot (213)](https://github.com/user-attachments/assets/e645636f-351b-4398-9887-995f38709647)
